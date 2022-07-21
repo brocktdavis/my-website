@@ -1,0 +1,31 @@
+.banner {
+    /* Put and keep at top */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Across whole window width */
+    width:  100%;
+
+    /* No bullet points */
+    list-style-type: none;
+
+    /* No margin or padding */
+    margin: 0px;
+    padding: 0px;
+
+    overflow: hidden;
+    background-color: var(--dark-darker);
+}
+
+.banner-link {
+    float:  left;
+}
+
+.banner-link p {
+    font-size: 1.5em;
+    display: block;
+    padding: 14px 16px;
+
+    text-decoration: none;
+}
