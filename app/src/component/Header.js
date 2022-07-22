@@ -2,9 +2,9 @@ import React from 'react';
 import './Header.css'
 
 
-function BannerLink(props) {
+function HeaderLink(props) {
   return (
-    <li className='banner-link' onClick={props.onClick}>
+    <li className='header-link' onClick={props.onClick}>
       <p>{props.text}</p>
     </li>
   );
@@ -12,19 +12,20 @@ function BannerLink(props) {
 
 class Header extends React.Component {
   render() {
+    const headerLinks = this.props.pages.map((pageName, index) =>
+      <HeaderLink
+        onClick={() => this.props.onClick(pageName)}
+        text={pageName}
+        key={index}
+      />
+    );
+
     return (
       <div>
-        <ul className='banner'>
-          <BannerLink
-            onClick={() => alert('banner click!')}
-            text="BannerLink1"
-          />
-          <BannerLink
-            onClick={() => alert('banner click2!')}
-            text="BannerLink2"
-          />
+        <ul className='header'>
+          {headerLinks}
         </ul>
-        <br className='banner-break' />
+        <br className='header-break' />
       </div>
     );
   }
