@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Header from './Header';
+import Palette from './Palette';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends React.Component {
           onClick={(pageName) => alert(pageName)}
         />
         <p>Body Text</p>
+        <Palette />
       </div>
     );
   }
