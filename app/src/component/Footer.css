@@ -1,0 +1,41 @@
+.footer {
+    /* Flex, keep in center vertically, and spread apart */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--dark-darker);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    white-space: nowrap;
+}
+
+/* Common to both contact info & socials */
+.footer ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer ul li {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border-right: 1px solid var(--accent1);
+}
+
+.icon {
+    padding-right: 0.75em;
+    width: 2.5em;
+}
