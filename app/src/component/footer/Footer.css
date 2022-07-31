@@ -35,6 +35,13 @@
     border-right: 1px solid var(--accent1);
 }
 
+.contact-info li a {
+    color: inherit;
+    display: inherit;
+    text-decoration: inherit;
+    align-items: inherit;
+}
+
 .icon {
     padding-right: 0.75em;
     width: 2.5em;

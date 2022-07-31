@@ -1,12 +1,12 @@
 import React from 'react';
 import './Footer.css';
 
-import mail from './../../public/assets/mail.png';
-import phone from './../../public/assets/phone.png';
-import locationPin from './../../public/assets/location_pin.png';
-import github from './../../public/assets/github.png'
-import linkedin from './../../public/assets/linkedin.png';
-import facebook from './../../public/assets/facebook.png';
+import mail from './../../../public/assets/mail.png';
+import phone from './../../../public/assets/phone.png';
+import locationPin from './../../../public/assets/location_pin.png';
+import github from './../../../public/assets/github.png'
+import linkedin from './../../../public/assets/linkedin.png';
+import facebook from './../../../public/assets/facebook.png';
 
 class Footer extends React.Component {
   render() {
@@ -28,12 +28,16 @@ function ContactInfo(props) {
         </p>
       </li>
       <li>
-        <img src={mail} alt='mail icon' className='icon' />
-        <p>btdavis9999@gmail.com</p>
+        <a href="mailto:btdavis9999@gmail.com">
+          <img src={mail} alt='mail icon' className='icon' />
+          <p>btdavis9999@gmail.com</p>
+        </a>
       </li>
       <li>
-        <img src={phone} alt='phone icon' className='icon' />
-        <p>501.282.4834</p>
+        <a href="tel:1-501-282-4834">
+          <img src={phone} alt='phone icon' className='icon' />
+          <p>501.282.4834</p>
+        </a>
       </li>
       <li>
         <img src={locationPin} alt='location pin icon' className='icon' />
