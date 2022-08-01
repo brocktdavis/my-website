@@ -1,12 +1,12 @@
 import React from 'react';
 import './Footer.css';
 
-import mail from './../../../public/assets/mail.png';
-import phone from './../../../public/assets/phone.png';
-import locationPin from './../../../public/assets/location_pin.png';
-import github from './../../../public/assets/github.png'
-import linkedin from './../../../public/assets/linkedin.png';
-import facebook from './../../../public/assets/facebook.png';
+import mail from './../../assets/mail.png';
+import phone from './../../assets/phone.png';
+import locationPin from './../../assets/location_pin.png';
+import github from './../../assets/github.png'
+import linkedin from './../../assets/linkedin.png';
+import facebook from './../../assets/facebook.png';
 
 class Footer extends React.Component {
   render() {
