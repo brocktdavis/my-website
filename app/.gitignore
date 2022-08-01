@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+# force reinstall every time for now
+package-lock.json
 
 # testing
 /coverage
