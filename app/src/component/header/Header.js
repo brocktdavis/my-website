@@ -26,6 +26,7 @@ class Header extends React.Component {
           {headerLinks}
         </ul>
         <br className='header-break' />
+        <br />
       </div>
     );
   }

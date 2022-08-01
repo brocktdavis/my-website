@@ -1,17 +1,17 @@
 .footer {
-    /* Flex, keep in center vertically, and spread apart */
+    /* Put and keep at bottom */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    /* Flex, keep in center vertically, and spread children apart */
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     background-color: var(--dark-darker);
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-
-    white-space: nowrap;
+    overflow: auto;
 }
 
 /* Common to both contact info & socials */
