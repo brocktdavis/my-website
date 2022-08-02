@@ -1,9 +1,4 @@
 .header {
-    /* Put and keep at top */
-    position: fixed;
-    top: 0;
-    left: 0;
-
     /* Across whole window width */
     width:  100%;
 

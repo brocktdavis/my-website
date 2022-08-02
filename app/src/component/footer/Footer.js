@@ -11,10 +11,10 @@ import facebook from './../../assets/facebook.png';
 class Footer extends React.Component {
   render() {
     return (
-      <div className='footer'>
+      <footer className='footer'>
         <ContactInfo />
         <Socials />
-      </div>
+      </footer>
     );
   }
 }

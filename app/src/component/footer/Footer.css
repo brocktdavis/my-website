@@ -1,45 +1,46 @@
 .footer {
-    /* Put and keep at bottom */
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-    /* Flex, keep in center vertically, and spread children apart */
+    background-color: var(--dark-darker);
+    
+    /* Flex layout */
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    flex-wrap: wrap;
 
-    background-color: var(--dark-darker);
-
-    overflow: auto;
+    padding: 0.5em;
 }
 
-/* Common to both contact info & socials */
-.footer ul {
-    list-style-type: none;
+/* Contact info and social portions */
+.footer * {
+    /* Flex layout */
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
 
-    margin: 0px;
-    padding: 0px;
+    /* Remove bullet points */
+    list-style-type: none;
+
+    /* Remove margin & padding */
+    margin: 0;
+    padding: 0;
 }
 
-.footer ul li {
+/* Each contact info & social element */
+.footer * * {
     display: flex;
     align-items: center;
 }
 
 .contact-info li {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    padding: 0 0.75em;
     border-right: 1px solid var(--accent1);
 }
 
-.contact-info li a {
+.contact-info li * {
+    display: flex;
+    align-items: center;
+
     color: inherit;
-    display: inherit;
     text-decoration: inherit;
-    align-items: inherit;
 }
 
 .icon {
