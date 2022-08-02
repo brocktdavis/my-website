@@ -32,4 +32,8 @@ body {
 
   /* Font */
   font-family: Verdana, Geneva, sans-serif;
+
+  /* Margin/Padding */
+  margin: 0;
+  padding: 0;
 }

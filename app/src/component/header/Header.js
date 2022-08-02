@@ -21,13 +21,11 @@ class Header extends React.Component {
     );
 
     return (
-      <div>
+      <header>
         <ul className='header'>
           {headerLinks}
         </ul>
-        <br className='header-break' />
-        <br />
-      </div>
+      </header>
     );
   }
 }
