@@ -1,0 +1,39 @@
+{
+  "experience": [
+    {
+      "business": "Epic Systems",
+      "job-title": "Software Developer",
+      "responsibilities": [
+        {
+          "title": "Full-stack engineering",
+          "description": " Engineered solutions for customer-requested workflows using technologies across multiple platforms and frameworks. Conducted code review for new features and bug fixes. Pioneered best practices for coding standards and documentation"
+        },
+        {
+          "title": "Project management",
+          "description": "Based on customer feedback, led the integration of new functionalities into the design and development process of an integrated app activity. Facilitated delegation of tasks in order to meet deadlines and quality standards."
+        },
+        {
+          "title": "Mentoring",
+          "description": "Mentored a fellow software developer at Epic. Conducted weekly check-ins, assisting with project management and development. Played an active role in personal and professional growth, aiding in mentee’s transition from college into the professional sphere"
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "university": "University of Texas at Austin",
+      "degree": "Bachelor of Sciences - Computer Science",
+      "courses": [
+        "Algorithms and Complexity",
+        "Data Structures",
+        "Computer Organization and Architecture",
+        "Operating Systems",
+        "Computer Networks",
+        "Modern Web Applications",
+        "Data Mining",
+        "Computer Graphics",
+        "Compilers"
+      ]
+    }
+  ]
+}
