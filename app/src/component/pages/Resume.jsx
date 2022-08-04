@@ -14,9 +14,15 @@ class Resume extends React.Component {
         <Education
           data={resume_data["education"]}
         />
-        <Skills />
-        <Projects />
-        <Publications />
+        <Skills
+          data={resume_data["skills"]}
+        />
+        <Projects
+          data={resume_data["projects"]}
+        />
+        <Publications
+          data={resume_data["publications"]}
+        />
       </div>
     );
   }
@@ -42,7 +48,8 @@ function ExperienceEntry(props) {
 
   return (
     <li className="expereience-entry">
-      <h3>{props.entryData["business"]}</h3>
+      <strong>{props.entryData["business"]}</strong>
+      <br />
       <em>{props.entryData["job-title"]}</em>
       <ul>{responsibilityEntries}</ul>
     </li>
@@ -72,65 +79,88 @@ function Education(props) {
 }
 
 function EducationEntry(props) {
-  let courseEntries = props.entryData["courses"].map((entry, index) =>
-    <CourseEntry entryData={entry} key={index} />
-  );
+  /* Comma delimited list of courses */
+  let courseList = props.entryData["courses"].join(", ");
 
   return (
     <li className="education-entry">
-      <h3>{props.entryData["university"]}</h3>
+      <strong>{props.entryData["university"]}</strong>
+      <br />
       <em>{props.entryData["degree"]}</em>
-      <p><strong>Courses: </strong></p>
-      <ul>{courseEntries}</ul>
+      <p><strong>Courses: </strong>{courseList}</p>
     </li>
   );
 }
 
-function CourseEntry(props) {
-  return (
-    <li className="courseEntry">
-      Entry
-    </li>
-  )
-}
-
 function Skills(props) {
+  let skillsEntries = props.data.map((entry, index) =>
+    <SkillEntry entryData={entry} key={index} />
+  );
+
   return (
     <>
       <h2>Skills</h2>
-      <ul>
-        <li>
-          UT Austin
-        </li>
-      </ul>
+      <ul>{skillsEntries}</ul>
     </>
+  );
+}
+
+function SkillEntry(props) {
+  let specificSkillEntries = props.entryData["items"].join(", ");
+
+  return (
+    <li>
+      <strong>{props.entryData["category"]}: </strong>{specificSkillEntries}
+    </li>
   );
 }
 
 function Projects(props) {
+  let projectList = props.data.map((entry, index) =>
+    <ProjectEntry entryData={entry} key={index} />
+  );
+
   return (
     <>
       <h2>Projects</h2>
-      <ul>
-        <li>
-          UT Austin
-        </li>
-      </ul>
+      <ul>{projectList}</ul>
     </>
   );
 }
 
+function ProjectEntry(props) {
+  return(
+    <li>
+      <strong>{props.entryData["title"]}: </strong>
+        {props.entryData["description"]} &nbsp;
+        Tech: {props.entryData["tech"]} &nbsp;
+        ({props.entryData["timeframe"]})
+    </li>
+  );
+}
+
 function Publications(props) {
+  let publicationList = props.data.map((entry, index) =>
+    <PublicationEntry entryData={entry} key={index} />
+  );
+
   return (
     <>
       <h2>Publications</h2>
-      <ul>
-        <li>
-          UT Austin
-        </li>
-      </ul>
+      <ul>{publicationList}</ul>
     </>
   );
+}
+
+function PublicationEntry(props) {
+  return (
+    <li>
+      <strong>{props.entryData["type"]}: {props.entryData["title"]}: </strong>
+      {props.entryData["description"]} &nbsp;
+      Tech: {props.entryData["tech"]} &nbsp;
+      ({props.entryData["timeframe"]})
+    </li>
+  )
 }
 
 
