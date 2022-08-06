@@ -10,7 +10,8 @@
     padding: 0px;
 
     overflow: hidden;
-    background-color: var(--dark-darker);
+    color: var(--text-accent);
+    background-color: var(--background-accent);
 }
 
 .header-link {
@@ -31,7 +32,8 @@
 }
 
 .header-link p:hover {
-    background-color: var(--dark-lighter);
+    color: var(--text-accent-active);
+    background-color: var(--background-accent-active);
     cursor: pointer;
 }
 

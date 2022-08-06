@@ -1,34 +1,19 @@
 :root {
-  --dark: #333652;
-  --accent1: #FAD02C;
-  --accent2: #E9EAEC;
-  --accent3: #B8CCDB;
-  /* 
-  Contrast Ratios
-    dark:accent1 -> 7.88:1 ✓
-    dark:accent2 -> 9.74:1 ✓
-    dark:accent3 -> 7.09:1 ✓
+  /* Text colors */
+  --text-main: #293241;
+  --text-accent: #adadad;
+  --text-accent-active: #003249;
 
-    accent1:accent2 -> 1.23:1 X
-    accent1:accent3 -> 1.11:1 X
-    accent2:accent3 -> 1.37:1 X
-  */
-
-  --dark-darker: #1f2132;
-  --accent1-darker: #efc006;
-  --accent2-darker: #ced0d4;
-  --accent3-darker: #96b3ca;
-
-  --dark-lighter: #474b71;
-  --accent1-lighter: #fbdc60;
-  --accent2-lighter: white;
-  --accent3-lighter: #dae4ec;
+  /* Background colors */
+  --background-main: #fbfff1;
+  --background-accent: #003249;
+  --background-accent-active: #adadad;
 }
 
 body {
   /* Color */
-  background: var(--dark);
-  color: var(--accent1);
+  background: var(--background-main);
+  color: var(--text-main);
 
   /* Font */
   font-family: Verdana, Geneva, sans-serif;
