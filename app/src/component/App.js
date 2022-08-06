@@ -3,26 +3,41 @@ import './App.css';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';
+import Resume from './pages/Resume';
 import Palette from './Palette';
+
+const pages = ['Home', 'Resume'];
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pages: ['Home', 'Resume'],
+      page: 'Home'
     }
   }
 
+  changePage(pageStr) {
+    this.setState({page: pageStr});
+  }
+
   render() {
+    let bodyContent = <p>404</p>;
+    if (this.state.page == 'Home') {
+      bodyContent = <p>Home</p>
+    } else if (this.state.page == 'Resume') {
+      bodyContent = <Resume />
+    }
+
     return (
       <div className="app">
         <Header
           className="app-header"
-          pages={this.state.pages}
-          onClick={(pageName) => alert(pageName)}
+          pages={pages}
+          onClick={(pageName) => this.changePage(pageName)}
         />
         <article className="app-body">
-          <Palette />
+          {bodyContent}
+          {/*<Palette />*/}
           {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida in fermentum et sollicitudin ac orci. Convallis aenean et tortor at. Et egestas quis ipsum suspendisse ultrices gravida. Metus aliquam eleifend mi in. Libero volutpat sed cras ornare arcu dui. Viverra adipiscing at in tellus integer. At urna condimentum mattis pellentesque id nibh tortor id. Arcu ac tortor dignissim convallis aenean et tortor at. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Orci dapibus ultrices in iaculis. Libero justo laoreet sit amet cursus sit amet dictum sit. Iaculis urna id volutpat lacus. Tincidunt eget nullam non nisi est sit amet facilisis magna. Nulla posuere sollicitudin aliquam ultrices. Blandit libero volutpat sed cras ornare arcu.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida in fermentum et sollicitudin ac orci. Convallis aenean et tortor at. Et egestas quis ipsum suspendisse ultrices gravida. Metus aliquam eleifend mi in. Libero volutpat sed cras ornare arcu dui. Viverra adipiscing at in tellus integer. At urna condimentum mattis pellentesque id nibh tortor id. Arcu ac tortor dignissim convallis aenean et tortor at. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Orci dapibus ultrices in iaculis. Libero justo laoreet sit amet cursus sit amet dictum sit. Iaculis urna id volutpat lacus. Tincidunt eget nullam non nisi est sit amet facilisis magna. Nulla posuere sollicitudin aliquam ultrices. Blandit libero volutpat sed cras ornare arcu.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida in fermentum et sollicitudin ac orci. Convallis aenean et tortor at. Et egestas quis ipsum suspendisse ultrices gravida. Metus aliquam eleifend mi in. Libero volutpat sed cras ornare arcu dui. Viverra adipiscing at in tellus integer. At urna condimentum mattis pellentesque id nibh tortor id. Arcu ac tortor dignissim convallis aenean et tortor at. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Orci dapibus ultrices in iaculis. Libero justo laoreet sit amet cursus sit amet dictum sit. Iaculis urna id volutpat lacus. Tincidunt eget nullam non nisi est sit amet facilisis magna. Nulla posuere sollicitudin aliquam ultrices. Blandit libero volutpat sed cras ornare arcu.</p>
