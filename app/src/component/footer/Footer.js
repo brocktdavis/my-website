@@ -41,7 +41,7 @@ function ContactInfo(props) {
       </li>
       <li>
         <img src={locationPin} alt='location pin icon' className='icon' />
-        <p>Austin, TX, USA</p>
+        <p>Madison, WI, USA</p>
       </li>
     </ul>
   );
