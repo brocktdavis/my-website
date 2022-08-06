@@ -8,6 +8,12 @@ import Palette from './Palette';
 
 const pages = ['Home', 'Resume'];
 
+const paragraph1 = "I graduated from the University of Texas at Austin with a BS in Computer Science in 2021. I have been working at Epic Systems as a mobile software developer since September 2021. In my career I enjoy taking on new responsibilities and learning new thing about all aspects of software engineering. My hobbies include playing ultimate frisbee, cooking, and sudoku. I was a member of TUFF (Texas Ultimate Frisbee Friends) during my time at UT, and enjoyed competing at frisbee tournaments around the country. My favorite dishes to cook are gumbo, risotto, curry, and salmon (every which way). I enjoy watching Cracking the Cryptic on youtube, and have had endless fun completing various types of sudoku puzzles on their apps.";
+const paragraph2 = "p2";
+const paragraph3 = "p3";
+const paragraph4 = "p4";
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +29,7 @@ class App extends React.Component {
   render() {
     let bodyContent = <p>404</p>;
     if (this.state.page == 'Home') {
-      bodyContent = <p>Home</p>
+      bodyContent = <p>{[paragraph1, paragraph2, paragraph3, paragraph4].join(<br />)}</p>
     } else if (this.state.page == 'Resume') {
       bodyContent = <Resume />
     }

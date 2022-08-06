@@ -1,5 +1,6 @@
 .footer {
-    background-color: var(--dark-darker);
+    color: var(--text-accent);
+    background-color: var(--background-accent);
     
     /* Flex layout */
     display: flex;
@@ -46,4 +47,7 @@
 .icon {
     padding-right: 0.75em;
     width: 2.5em;
+
+    stroke: black;
+    fill: red;
 }
