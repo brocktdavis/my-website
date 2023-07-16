@@ -1,24 +1,13 @@
-:root {
-  /* Text colors */
-  --text-main: #293241;
-  --text-accent: #adadad;
-  --text-accent-active: #003249;
-
-  /* Background colors */
-  --background-main: #fbfff1;
-  --background-accent: #003249;
-  --background-accent-active: #adadad;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  /* Color */
-  background: var(--background-main);
-  color: var(--text-main);
-
-  /* Font */
-  font-family: Verdana, Geneva, sans-serif;
-
-  /* Margin/Padding */
-  margin: 0;
-  padding: 0;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
