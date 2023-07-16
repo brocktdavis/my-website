@@ -1,0 +1,53 @@
+.footer {
+    color: var(--text-accent);
+    background-color: var(--background-accent);
+    
+    /* Flex layout */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 0.5em;
+}
+
+/* Contact info and social portions */
+.footer * {
+    /* Flex layout */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    /* Remove bullet points */
+    list-style-type: none;
+
+    /* Remove margin & padding */
+    margin: 0;
+    padding: 0;
+}
+
+/* Each contact info & social element */
+.footer * * {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info li {
+    padding: 0 0.75em;
+    border-right: 1px solid var(--accent1);
+}
+
+.contact-info li * {
+    display: flex;
+    align-items: center;
+
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.icon {
+    padding-right: 0.75em;
+    width: 2.5em;
+
+    stroke: black;
+    fill: red;
+}

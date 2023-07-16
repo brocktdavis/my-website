@@ -1,0 +1,26 @@
+.palette-row {
+    display: flex;
+}
+
+.palette-box {
+    flex-grow: 1;
+    background: white;
+    color: black;
+    border: 3px solid black;
+    margin:  2px;
+}
+
+.dark { background: var(--dark); }
+.accent1 { background: var(--accent1); }
+.accent2 { background: var(--accent2); }
+.accent3 { background: var(--accent3); }
+
+.dark-darker { background: var(--dark-darker); }
+.accent1-darker { background: var(--accent1-darker); }
+.accent2-darker { background: var(--accent2-darker); }
+.accent3-darker { background: var(--accent3-darker); }
+
+.dark-lighter { background: var(--dark-lighter); }
+.accent1-lighter { background: var(--accent1-lighter); }
+.accent2-lighter { background: var(--accent2-lighter); }
+.accent3-lighter { background: var(--accent3-lighter); }

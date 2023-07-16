@@ -1,0 +1,43 @@
+.header {
+    /* Across whole window width */
+    width:  100%;
+
+    /* No bullet points */
+    list-style-type: none;
+
+    /* No margin or padding */
+    margin: 0px;
+    padding: 0px;
+
+    overflow: hidden;
+    color: var(--text-accent);
+    background-color: var(--background-accent);
+}
+
+.header-link {
+    /* Keep on left */
+    float:  left;
+}
+
+.header-link p {
+    /* Font decoration */
+    font-size: 1.5em;
+
+    /* Keep in blocks with padding but no margin */
+    padding: 14px 16px;
+    margin: 0;
+
+    /* Don't underline links */
+    text-decoration: none;
+}
+
+.header-link p:hover {
+    color: var(--text-accent-active);
+    background-color: var(--background-accent-active);
+    cursor: pointer;
+}
+
+.header-break {
+    height: 0;
+    margin-bottom: 1.5em;
+}

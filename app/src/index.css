@@ -1,5 +1,24 @@
+:root {
+  /* Text colors */
+  --text-main: #293241;
+  --text-accent: #adadad;
+  --text-accent-active: #003249;
+
+  /* Background colors */
+  --background-main: #fbfff1;
+  --background-accent: #003249;
+  --background-accent-active: #adadad;
+}
+
 body {
+  /* Color */
+  background: var(--background-main);
+  color: var(--text-main);
+
+  /* Font */
+  font-family: Verdana, Geneva, sans-serif;
+
+  /* Margin/Padding */
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
