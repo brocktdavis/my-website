@@ -1,14 +1,8 @@
-import './App.css';
-
+import React from 'react';
+import { Router } from 'root';
 
 export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello, World!
-        </p>
-      </header>
-    </div>
+    <Router />
   );
 }
