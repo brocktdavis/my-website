@@ -1,36 +1,16 @@
 import React, { useEffect } from 'react';
 import {
   BrowserRouter,
-  Outlet,
   Route,
   Routes,
-  useLocation,
 } from 'react-router-dom';
+import { Header } from 'root';
 import {
   About,
   Blog,
   Home,
   Resume,
 } from 'pages';
-
-const useRouteTracking = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.log('Location: ', location);
-  }, [location])
-}
-
-const Header = () => {
-  useRouteTracking();
-
-  return (
-    <div>
-      Hello, Header!
-      <Outlet />
-    </div>
-  );
-};
 
 export const Router = () => (
   <BrowserRouter>

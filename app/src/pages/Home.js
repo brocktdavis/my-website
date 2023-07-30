@@ -1,8 +1,12 @@
 import React from 'react';
+import { Button } from '@mui/material';
 
 export const Home = (props) => {
 
   return (
-    <p>Home</p>
+    <div>
+      <p>Home</p>
+      <Button variant='contained'>Hello, World</Button>
+    </div>
   );
 };
