@@ -5,21 +5,15 @@ import {
   Routes,
 } from 'react-router-dom';
 import { Header } from 'root';
-import {
-  About,
-  Blog,
-  Home,
-  Resume,
-} from 'pages';
+import { ROUTES } from './routes';
 
 export const Router = () => (
   <BrowserRouter>
     <Routes>
         <Route path={'/'} element={<Header />}>
-          <Route path={'home'} element={<Home />} />
-          <Route path={'blog'} element={<Blog />} />
-          <Route path={'about'} element={<About />} />
-          <Route path={'resume'} element={<Resume />} />
+        { ROUTES.map(({ path, Element }) => (
+          <Route path={path} element={<Element />} />
+        ))}
         </Route>
     </Routes>
   </BrowserRouter>

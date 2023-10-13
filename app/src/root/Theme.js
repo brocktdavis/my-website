@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -15,6 +15,9 @@ const theme = createTheme({
 
 export const Theme = (props) => (
   <ThemeProvider theme={theme}>
-    {props.children}
+    <>
+      <CssBaseline />
+      {props.children}
+    </>
   </ThemeProvider>
 );
