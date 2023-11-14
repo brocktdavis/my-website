@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
 import {
   BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom';
-import { Header } from 'root';
+import { Header } from './Header';
 import { ROUTES } from './routes';
 
 export const Router = () => (

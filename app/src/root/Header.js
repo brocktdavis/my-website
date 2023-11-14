@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import * as React from 'react';
 import {
     Outlet,
     useLocation,
@@ -8,7 +8,7 @@ import { Container } from '@mui/material';
 const useRouteTracking = () => {
   const location = useLocation();
 
-  useEffect(() => {
+  React.useEffect(() => {
     console.log('Location: ', location);
   }, [location])
 };
