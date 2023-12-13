@@ -3,8 +3,11 @@ import {
     Outlet,
     useLocation,
 } from 'react-router-dom';
-import { AppBar, Box, Button, Container, IconButton, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { Menu } from '@mui/icons-material';
+import { AppBar, Box, Button, Drawer, IconButton, Toolbar, useMediaQuery, useTheme } from '@mui/material';
+import { Menu, Close } from '@mui/icons-material';
+
+/** Direction from which the navigation drawers slides. */
+const MENU_POSITION = 'right';
 
 /** Tracks the router (i.e. URL) location. */
 const useRouteTracking = () => {
@@ -22,19 +25,52 @@ const useShouldCollapseHeader = () => {
   return useMediaQuery(theme.breakpoints.down('sm'));
 };
 
+/** Component that is displayed within the side menu drawer on mobile-sized devices. */
+const SideMenuDrawer = ({ open, toggleDrawer }) => (
+  <Drawer
+    anchor={MENU_POSITION}
+    open={open}
+    onClose={toggleDrawer}
+  >
+    <Box
+      sx={{ width: '100vw' }}
+      role='presentation'
+    >
+      <Toolbar>
+        <div style={{ flexGrow: 1}} />
+        <IconButton size='large' color='inherit' aria-label='close' onClick={toggleDrawer}>
+          <Close />
+        </IconButton>
+      </Toolbar>
+      {/* TODO: follow https://mui.com/material-ui/react-drawer/ to make nice looking drawer */}
+    </Box>
+  </Drawer>
+);
+
 /** Renders navigation options as a menu button that opens a presented modal-type side container. */
 const NavigationSideMenu = () => {
+  const [ open, setOpen ] = React.useState(false);
+  
+  const toggleDrawer = event => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setOpen(!open);
+  };
 
   return (
-    <IconButton
-      size='large'
-      edge='start'
-      color='inherit'
-      aria-label='menu'
-      sx={{ mr: 2 }}
-    >
-      <Menu />
-    </IconButton>
+    <>
+      <div style={{ flexGrow: 1 }} />
+      <IconButton
+        size='large'
+        color='inherit'
+        aria-label='menu'
+        onClick={toggleDrawer}
+      >
+        <Menu />
+      </IconButton>
+      <SideMenuDrawer open={open} toggleDrawer={toggleDrawer} />
+    </>
   );
 };
 
@@ -46,6 +82,8 @@ const NavigationBar = () => {
       <Button color='inherit'>Option 1</Button>
       <Button color='inherit'>Option 2</Button>
       <Button color='inherit'>Option 3</Button>
+      <div style={{ flexGrow: 1 }} />
+      <Button color='inherit'>Login</Button>
     </>
   );
 };
@@ -65,7 +103,6 @@ export const Header = () => {
             ) : (
               <NavigationBar />
             )}
-            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </Box>
