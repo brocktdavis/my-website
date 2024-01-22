@@ -1,10 +1,27 @@
 import * as React from 'react';
 import {
-    Outlet,
-    useLocation,
+  Link,
+  Outlet,
+  useLocation,
 } from 'react-router-dom';
-import { AppBar, Box, Button, Drawer, IconButton, Toolbar, useMediaQuery, useTheme } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Button,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  useMediaQuery,
+  useTheme
+} from '@mui/material';
 import { Menu, Close } from '@mui/icons-material';
+import { ROUTES } from './routes';
+
+const NAV_OPTIONS = ROUTES.filter(route => !!route.navTitle);
 
 /** Direction from which the navigation drawers slides. */
 const MENU_POSITION = 'right';
@@ -34,15 +51,23 @@ const SideMenuDrawer = ({ open, toggleDrawer }) => (
   >
     <Box
       sx={{ width: '100vw' }}
-      role='presentation'
+      role={'presentation'}
     >
-      <Toolbar>
-        <div style={{ flexGrow: 1}} />
-        <IconButton size='large' color='inherit' aria-label='close' onClick={toggleDrawer}>
-          <Close />
-        </IconButton>
-      </Toolbar>
-      {/* TODO: follow https://mui.com/material-ui/react-drawer/ to make nice looking drawer */}
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton sx={{ justifyContent: 'flex-end'}} onClick={toggleDrawer}>
+            <Close />
+          </ListItemButton>
+        </ListItem>
+        {NAV_OPTIONS.map(({ navTitle, path }) => (
+          <ListItem key={navTitle} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} component={Link} to={path} onClick={toggleDrawer} >
+              <ListItemText primary={navTitle} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        
+      </List>
     </Box>
   </Drawer>
 );
@@ -62,9 +87,9 @@ const NavigationSideMenu = () => {
     <>
       <div style={{ flexGrow: 1 }} />
       <IconButton
-        size='large'
-        color='inherit'
-        aria-label='menu'
+        size={'large'}
+        color={'inherit'}
+        aria-label={'menu'}
         onClick={toggleDrawer}
       >
         <Menu />
@@ -75,18 +100,16 @@ const NavigationSideMenu = () => {
 };
 
 /** Renders navigation options directly on the toolbar. */
-const NavigationBar = () => {
-
-  return (
-    <>
-      <Button color='inherit'>Option 1</Button>
-      <Button color='inherit'>Option 2</Button>
-      <Button color='inherit'>Option 3</Button>
-      <div style={{ flexGrow: 1 }} />
-      <Button color='inherit'>Login</Button>
-    </>
-  );
-};
+const NavigationBar = () => (
+  <>
+    {NAV_OPTIONS.map(({ navTitle, path }) => (
+      <Button key={navTitle} color={'inherit'} size={'large'} component={Link} to={path}>
+        {navTitle}
+      </Button>
+    ))}
+    <div style={{ flexGrow: 1 }} />
+  </>
+);
 
 export const Header = () => {
   useRouteTracking();
@@ -94,9 +117,9 @@ export const Header = () => {
   const shouldCollapseOptions = useShouldCollapseHeader();
 
   return (
-    <div id="header">
+    <div id={'header'}>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='static'>
+        <AppBar position={'static'} component={'nav'}>
           <Toolbar>
             { shouldCollapseOptions ? (
               <NavigationSideMenu />
