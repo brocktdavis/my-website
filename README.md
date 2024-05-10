@@ -3,6 +3,9 @@
 
 ## Running the app
 
-### React
+### Prerequisites
+- git
+- Docker
 
-**Dev Mode**: `docker compose up -d`
+### Development Mode
+Run `docker compose up -d` navigate to http://localhost:3000. Code changes made should take immediate effect in the browser.
