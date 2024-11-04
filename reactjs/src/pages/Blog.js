@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { BlogMap } from 'components/BlogMap';
 
 const MAX_CONTENT_LENGTH = 240;
 
@@ -53,6 +54,11 @@ export const Blog = (props) => {
             <BlogPreview key={post.key} post={post} />
           </Grid>
         ))}
+        <Grid item xs={12}>
+          <Paper>
+          <BlogMap />
+          </Paper>
+        </Grid>
       </Grid>
     </Container>
   );
