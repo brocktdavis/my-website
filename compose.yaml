@@ -17,11 +17,11 @@ services:
       - db
   reactjs:
     build: ./reactjs
-    command: sh -c "npm start"
+    command: sh -c "npm run dev"
     ports:
-     - 3000:3000
+      - 5173:5173
     volumes:
-     - ./reactjs/:/reactjs
-     - reactjs_node_modules:/reactjs/node_modules
+      - ./reactjs:/reactjs
+      - reactjs_node_modules:/reactjs/node_modules
 volumes:
   reactjs_node_modules:
