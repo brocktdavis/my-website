@@ -14,5 +14,6 @@ Run `docker compose up -d --build` navigate to http://localhost:3000. Code chang
 
 #### Extensions
   - ESLint (`dbaeumer.vscode-eslint`)
+  - Tailwind CSS IntelliSense (`bradlc.vscode-tailwindcss`)
 
 
