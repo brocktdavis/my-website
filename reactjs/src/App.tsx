@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Map from './components/Map';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         <p>Maecenas sit amet velit in libero vestibulum ullamcorper. Duis id viverra nisl, eu varius mauris. Phasellus eleifend neque rhoncus, pellentesque quam non, tincidunt erat. Vivamus ante metus, sagittis quis leo et, tristique lacinia augue. Sed laoreet, velit sed tincidunt gravida, est odio suscipit arcu, ut hendrerit eros justo et metus. Nunc pellentesque sit amet felis eu semper. Nam sit amet euismod diam, sit amet faucibus dolor. Aenean interdum facilisis lorem quis interdum. Donec at imperdiet augue. In at neque magna. Praesent ut porttitor ante. Suspendisse quam sapien, vestibulum sed consequat vel, mollis at lorem. Quisque sagittis, nulla eget varius malesuada, justo lectus congue massa, ac scelerisque ipsum ligula venenatis lorem. Vestibulum consectetur viverra nunc a dapibus.</p>
         <p>Aliquam erat volutpat. Suspendisse libero tellus, lobortis quis cursus ut, congue sit amet enim. Mauris sed auctor dolor. Cras id ornare turpis. Suspendisse ut maximus sem. Sed dignissim lacus et maximus luctus. Curabitur eget mollis risus. Donec a lectus arcu. Integer accumsan arcu eu augue sodales euismod. Mauris feugiat ullamcorper semper. Nulla non est dolor. Ut ultricies finibus orci vel aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc a nibh vitae quam sollicitudin suscipit. Etiam tempus nibh ultricies neque eleifend, nec sodales purus fringilla.</p>
         <p>Sed et risus enim. Fusce ac nisi lectus. Pellentesque quis neque et justo mollis tristique. Vestibulum eleifend, ipsum eu pellentesque sollicitudin, arcu velit interdum justo, a lobortis purus odio vel neque. Nulla accumsan, odio eu blandit imperdiet, ante urna efficitur ipsum, at tincidunt arcu libero et ipsum. Etiam gravida odio in tellus venenatis, vel feugiat ante ultrices. Curabitur vehicula laoreet tortor, eu venenatis nulla porttitor in. Fusce condimentum justo at egestas ullamcorper. Praesent quis placerat justo.</p>
+        <Map />
       </div>
     </>
   )

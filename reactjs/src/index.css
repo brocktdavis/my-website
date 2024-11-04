@@ -7,3 +7,5 @@ html {
     text-stone-950 bg-stone-50
     dark:text-slate-100 dark:bg-stone-900
 }
+
+#map1 { height: 180px; }
