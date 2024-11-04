@@ -9,3 +9,10 @@
 
 ### Development Mode
 Run `docker compose up -d --build` navigate to http://localhost:3000. Code changes made should take immediate effect in the browser.
+
+### Recommended VSCode Setup
+
+#### Extensions
+  - ESLint (`dbaeumer.vscode-eslint`)
+
+
