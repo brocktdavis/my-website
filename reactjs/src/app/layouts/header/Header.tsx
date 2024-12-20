@@ -5,9 +5,9 @@ import { Outlet } from 'react-router';
 const BG = 'bg-emerald-950 shadow-emerald-950 shadow-md';
 
 const PAGES = [
-  { title: 'Home', href: '#home' },
-  { title: 'Blog', href: '#blog' },
-  { title: 'About', href: '#about' },
+  { title: 'Home', href: '/' },
+  { title: 'Blog', href: '/blog' },
+  { title: 'About', href: '/about' },
 ];
 
 interface HeaderItemProps {
