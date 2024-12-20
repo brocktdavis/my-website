@@ -29,3 +29,6 @@ TODO
  - [ ] https://wiki.openstreetmap.org/wiki/API
  - [ ] https://wiki.openstreetmap.org/wiki/Slippy_map
  - [ ] https://switch2osm.org/
+
+### Feature sliced design for `reactjs` structure
+See https://blog.meetbrackets.com/architectures-of-modern-front-end-applications-8859dfe6c12e
