@@ -7,13 +7,25 @@
 - git
 - Docker
 
-### Development Mode
-Run `docker compose up -d --build` navigate to http://localhost:3000. Code changes made should take immediate effect in the browser.
+### Working
+To start the project in development mode 
 
-### Recommended VSCode Setup
+Run `./scripts/start.sh` and navigate to http://localhost:5173
+Code changes should take immediate effect in the browser
+
+### Recommended VSCode setup
+TODO
 
 #### Extensions
   - ESLint (`dbaeumer.vscode-eslint`)
   - Tailwind CSS IntelliSense (`bradlc.vscode-tailwindcss`)
 
 
+### Further map reading
+ - [ ] https://leafletjs.com/reference.html
+ - [X] https://wiki.openstreetmap.org/wiki/Main_Page
+ - [ ] https://wiki.openstreetmap.org/wiki/Develop
+ - [ ] https://wiki.openstreetmap.org/wiki/Using_OpenStreetMap#Software_development
+ - [ ] https://wiki.openstreetmap.org/wiki/API
+ - [ ] https://wiki.openstreetmap.org/wiki/Slippy_map
+ - [ ] https://switch2osm.org/

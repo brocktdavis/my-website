@@ -17,10 +17,16 @@
 
     /* Linting */
     "strict": true,
+    "baseUrl": "src",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "app/*": ["app/*"],
+			"pages/*": ["pages/*"],
+			"shared/*": ["shared/*"]
+		}
   },
   "include": ["src"]
 }

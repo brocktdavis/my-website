@@ -8,4 +8,5 @@ html {
     dark:text-slate-100 dark:bg-stone-900
 }
 
+/* TODO: refactor this to map */
 #map1 { height: 180px; }
