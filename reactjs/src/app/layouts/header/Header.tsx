@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MdClose, MdMenu } from 'react-icons/md';
+import { Outlet } from 'react-router';
 
 const BG = 'bg-emerald-950 shadow-emerald-950 shadow-md';
 
@@ -26,10 +27,11 @@ const MenuHeaderItem = ({ href, title }: HeaderItemProps) => (
   </a>
 );
 
-export const Header = () => {
+export const HeaderLayout = () => {
   const [ isOpen, setIsOpen ] = useState(false);
 
   return (
+    <>
     <header className={`${BG} w-full`}>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
@@ -57,5 +59,7 @@ export const Header = () => {
         </nav>
       )}
     </header>
-  )
+    <Outlet />
+    </>
+  );
 };

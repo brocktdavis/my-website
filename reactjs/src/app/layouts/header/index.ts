@@ -1,1 +1,1 @@
-export { Header } from './Header';
+export { HeaderLayout } from './Header';

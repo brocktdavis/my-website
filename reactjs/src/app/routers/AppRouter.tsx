@@ -1,11 +1,19 @@
-import { Header } from 'app/layout';
-import { HomePage } from 'pages/home';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
-/* TODO: install react router and pages */
+import { HeaderLayout } from 'app/layouts';
+
+import { HomePage } from 'pages/home';
+import { AlbionPage } from 'pages/albion';
+// import { MapPage } from 'pages/blog';
 
 export const AppRouter = () => (
-  <>
-    <Header />
-    <HomePage />
-  </>
+  <BrowserRouter>
+    <Routes>
+      <Route element={<HeaderLayout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+      <Route path='albion' element={<AlbionPage />} />
+    </Routes>
+    {/* TODO: 404 Page */}
+  </BrowserRouter>
 );
