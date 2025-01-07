@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html, #modal-container {
   @apply 
     text-stone-950 bg-stone-50
     dark:text-slate-100 dark:bg-stone-900
