@@ -1,7 +1,7 @@
 import { AlbionItem, AlbionItemDef, AlbionItemSlotEnum, Enchantment, ENCHANTMENTS, QUALITIES, Quality, Tier, TIERS } from 'pages/albion/model';
 import ItemDefs from '../assets/item-defs.json';
 
-const getDefs: () => AlbionItemDef[] = () => (
+const getAllItemDefs: () => AlbionItemDef[] = () => (
   ItemDefs.map(sourceDef => ({
     ...sourceDef,
     slot: AlbionItemSlotEnum[
@@ -11,7 +11,7 @@ const getDefs: () => AlbionItemDef[] = () => (
 );
 
 export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
-  const defs = getDefs();
+  const defs = getAllItemDefs();
   return defs.filter(def => def.slot === slot);
 };
 
