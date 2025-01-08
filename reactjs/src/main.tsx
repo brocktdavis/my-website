@@ -1,11 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 
-import App from './app/App.tsx';
+import App from 'app/App.tsx';
+import { store } from 'app/model/store';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
-    <div id='modal-root' />
+    <Provider store={store}>
+      <App />
+      <div id='modal-root' />
+    </Provider>
   </StrictMode>,
 );

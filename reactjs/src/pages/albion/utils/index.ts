@@ -1,11 +1,32 @@
-import { ItemSlotType } from 'pages/albion/types';
-import Bags from 'shared/assets/itemDefs/bag.json';
+import { AlbionItem, AlbionItemDef, AlbionItemSlotEnum, Enchantment, ENCHANTMENTS, QUALITIES, Quality, Tier, TIERS } from 'pages/albion/model';
+import ItemDefs from '../assets/item-defs.json';
 
-export const getItemDefsForSlot = (slot: ItemSlotType) => {
-  switch(slot) {
-    case ItemSlotType.Bag:
-      return Bags;
-    default:
-      return [];
+const getDefs: () => AlbionItemDef[] = () => (
+  ItemDefs.map(sourceDef => ({
+    ...sourceDef,
+    slot: AlbionItemSlotEnum[
+      sourceDef.slot as keyof typeof AlbionItemSlotEnum
+    ],
+  } as AlbionItemDef))
+);
+
+export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
+  const defs = getDefs();
+  return defs.filter(def => def.slot === slot);
+};
+
+export const getItemsForDef = (def: AlbionItemDef, tiers?: Tier[], enchantments?: Enchantment[], qualities?: Quality[]) => {
+  const tiersToUse = tiers ? tiers : TIERS;
+  const enchantmentsToUse = enchantments ? enchantments : ENCHANTMENTS;
+  const qualitiesToUse = qualities ? qualities : QUALITIES;
+
+  const result: AlbionItem[] = [];
+  for (const tier of tiersToUse) {
+    for (const enchantment of enchantmentsToUse) {
+      for (const quality of qualitiesToUse) {
+        result.push({ def, tier, enchantment, quality });
+      }
+    }
   }
+  return result;
 };

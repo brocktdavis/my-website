@@ -1,9 +1,9 @@
-import { ItemSlotType } from 'pages/albion/types';
+import { AlbionItemSlotEnum } from 'pages/albion/model';
 import { getItemDefsForSlot } from 'pages/albion/utils';
 
 
 interface AlbionItemSlotModalProps {
-  type: ItemSlotType;
+  type: AlbionItemSlotEnum;
   onItemSelected: (name: string) => void;
 }
 
@@ -16,7 +16,7 @@ export const AlbionItemSlotModal = ({ type, onItemSelected }: AlbionItemSlotModa
       { items.map((item) => (
         <div key={item.name}>
           <button onClick={() => onItemSelected(item.name)}>
-            {item.name} | T{item.tier}.{item.enchantment}
+            {item.name}
           </button>
         </div>
       ))}
