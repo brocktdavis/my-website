@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'app/model/store';
-import { Modal } from 'shared/modal';
+import { showModal } from 'shared/model';
 import { AlbionItemSlotEnum, selectItemForSlot } from 'pages/albion/model';
 import { AlbionItemSlotModal } from '.';
 
@@ -13,17 +12,18 @@ interface ItemSlotProps {
 }
 
 export const AlbionItemSlot = ({ slot, style }: ItemSlotProps) => {
-  const [ modalIsOpen, setModalIsOpen ] = useState(false);
-
   const currentItem = useSelector((state: RootState) => selectItemForSlot(state, slot));
+
+  const dispatch = useDispatch();
+
+  const handleToggleModal = () => {
+    dispatch(showModal({ Component: AlbionItemSlotModal, props: { slot } }));
+  }
 
   return (
     <>
-    <Modal isOpen={modalIsOpen} onClose={() => setModalIsOpen(!modalIsOpen)}>
-      <AlbionItemSlotModal slot={slot} />
-    </Modal>
     { USE_STUB ? (
-      <div onClick={() => setModalIsOpen(!modalIsOpen)} style={style} className='bg-amber-600 w-24 h-24 m-1 border border-black flex justify-center items-center'>
+      <div onClick={handleToggleModal} style={style} className='bg-amber-600 w-24 h-24 m-1 border border-black flex justify-center items-center'>
         <p className='text-white'>{ currentItem?.def.name ?? slot }</p>
       </div>
     ) : (
