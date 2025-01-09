@@ -3,13 +3,16 @@ import { AlbionItemSlotEnum, selectOverallFilters } from 'pages/albion/model';
 import { AlbionItemSlot } from '../slot';
 
 export const AlbionBuild = () => {
-  const { name, tiers: tier, enchantments: enchantment } = useSelector(selectOverallFilters);
-  const filterInfoString = `Filter: ${name ?? '<none>'} | T${tier ?? 'X'}.${enchantment ?? 'X'}`;
+  const { name, tiers, enchantments } = useSelector(selectOverallFilters);
+  console.log('BTD [AlbionBuild] filters: ', name, tiers, enchantments);
+
 
   return (
     <>
-    <p>{filterInfoString}</p>
-    <div className='flex flex-row flex-nowrap'>
+    <div className='w-full h-32 rounded-md border-dashed border flex justify-center items-center'>
+      <p>Future: Filters & Search</p>
+    </div>
+    <div className='flex flex-row flex-nowrap justify-center'>
       <div className='flex flex-col'>
         <AlbionItemSlot slot={AlbionItemSlotEnum.Bag} style={{ marginTop: '10px' }} />
         <AlbionItemSlot slot={AlbionItemSlotEnum.MainHand} />
