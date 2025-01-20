@@ -1,0 +1,1342 @@
+items:
+  # region Main Hands
+  # region Warrior Main Hands
+  # region Swords
+  - id: MAIN_SWORD
+    name: Broadsword
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: False
+  - id: 2H_CLAYMORE
+    name: Claymore
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: True
+  - id: 2H_DUALSWORD
+    name: Dual Swords
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: True
+  - id: MAIN_SCIMITAR_MORGANA
+    name: Clarent Blade
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: False
+  - id: 2H_CLEAVER_HELL
+    name: Carving Sword
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: True
+  - id: 2H_DUALSCIMITAR_UNDEAD
+    name: Galatine Pair
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: True
+  - id: 2H_CLAYMORE_AVALON
+    name: Kingmaker
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: True
+  - id: MAIN_SWORD_CRYSTAL
+    name: Infinity Blade
+    slot: MainHand
+    class: Warrior
+    subtype: Sword
+    is2H: False
+  # endregion (Swords)
+  # region Axes
+  - id: MAIN_AXE
+    name: Battleaxe
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: False
+  - id: 2H_AXE
+    name: Greataxe
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_HALBERD
+    name: Halberd
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_HALBERD_MORGANA
+    name: Carrioncaller
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_SCYTHE_HELL
+    name: Infernal Scythe
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_DUALAXE_KEEPER
+    name: Bear Paws
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_AXE_AVALON
+    name: Realmbreaker
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  - id: 2H_SCYTHE_CRYSTAL
+    name: Crystal Reaper
+    slot: MainHand
+    class: Warrior
+    subtype: Axe
+    is2H: True
+  # endregion (Axes)
+  # region Maces
+  - id: MAIN_MACE
+    name: Mace
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: False
+  - id: 2H_MACE
+    name: Heavy Mace
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: True
+  - id: 2H_FLAIL
+    name: Morning Star
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: True
+  - id: MAIN_ROCKMACE_KEEPER
+    name: Bedrock Mace
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: False
+  - id: MAIN_MACE_HELL
+    name: Incubus Mace
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: False
+  - id: 2H_MACE_MORGANA
+    name: Camlann Mace
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: True
+  - id: 2H_DUALMACE_AVALON
+    name: Oathkeepers
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: True
+  - id: MAIN_MACE_CRYSTAL
+    name: Dreadstorm Monarch
+    slot: MainHand
+    class: Warrior
+    subtype: Mace
+    is2H: False
+  # endregion (Maces)
+  # region Hammers
+  - id: MAIN_HAMMER
+    name: Hammer
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: False
+  - id: 2H_POLEHAMMER
+    name: Polehammer
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  - id: 2H_HAMMER
+    name: Great Hammer
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  - id: 2H_HAMMER_UNDEAD
+    name: Tomb Hammer
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  - id: 2H_DUALHAMMER_HELL
+    name: Forge Hammers
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  - id: 2H_RAM_KEEPER
+    name: Grovekeeper
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  - id: 2H_HAMMER_AVALON
+    name: Hand of Justice
+    slot: MainHand
+    class: Warrior
+    subtype: Hammer
+    is2H: True
+  # endregion (Hammers)
+  # region War Gloves
+  - id: 2H_KNUCKLES_SET1
+    name: Brawler Gloves
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_SET2
+    name: Battle Bracers
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_SET3
+    name: Spiked Guantlets
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_KEEPER
+    name: Ursine Maulers
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_HELL
+    name: Hellfire Hands
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_MORGANA
+    name: Ravenstrike Cestus
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  - id: 2H_KNUCKLES_AVALON
+    name: Fists of Avalon
+    slot: MainHand
+    class: Warrior
+    subtype: War Gloves
+    is2H: True
+  # endregion (War Gloves)
+  # region Crossbows
+  - id: 2H_CROSSBOW
+    name: Crossbow
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  - id: 2H_CROSSBOWLARGE
+    name: Heavy Crossbow
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  - id: MAIN_1HCROSSBOW
+    name: Light Crossbow
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: False
+  - id: 2H_REPEATINGCROSSBOW_UNDEAD
+    name: Weaping Repeater
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  - id: 2H_DUALCROSSBOW_HELL
+    name: Boltcasters
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  - id: 2H_CROSSBOWLARGE_MORGANA
+    name: Siegebow
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  - id: 2H_CROSSBOW_CANNON_AVALON
+    name: Energy Shaper
+    slot: MainHand
+    class: Warrior
+    subtype: Crossbow
+    is2H: True
+  # endregion (Crossbows)
+  # endregion (Warrior Main Hands)
+  # region Hunter Main Hands
+  # region Bows
+  - id: 2H_BOW
+    name: Bow
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_WARBOW
+    name: Warbow
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_LONGBOW
+    name: Longbow
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_LONGBOW_UNDEAD
+    name: Whispering Bow
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_BOW_HELL
+    name: Wailing Bow
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_BOW_KEEPER
+    name: Bow of Badon
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  - id: 2H_BOW_AVALON
+    name: Mistpiercer
+    slot: MainHand
+    class: Hunter
+    subtype: Bow
+    is2H: True
+  # endregion (Bows)
+  # region Daggers
+  - id: MAIN_DAGGER
+    name: Dagger
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: False
+  - id: 2H_DAGGERPAIR
+    name: Dagger Pair
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: True
+  - id: 2H_CLAWPAIR
+    name: Claws
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: True
+  - id: MAIN_RAPIER_MORGANA
+    name: Bloodletter
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: False
+  - id: MAIN_DAGGER_HELL
+    name: Demonfang
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: False
+  - id: 2H_DUALSICKLE_UNDEAD
+    name: Deathgivers
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: True
+  - id: 2H_DAGGER_KATAR_AVALON
+    name: Bridled Fury
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: True
+  - id: 2H_DAGGERPAIR_CRYSTAL
+    name: Twin Slayers
+    slot: MainHand
+    class: Hunter
+    subtype: Dagger
+    is2H: True
+  # endregion (Daggers)
+  # region Spears
+  - id: MAIN_SPEAR
+    name: Spear
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: False
+  - id: 2H_SPEAR
+    name: Pike
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: True
+  - id: 2H_GLAIVE
+    name: Glaive
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: True
+  - id: MAIN_SPEAR_KEEPER
+    name: Heron Spear
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: False
+  - id: 2H_HARPOON_HELL
+    name: Spirithunter
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: True
+  - id: 2H_TRIDENT_UNDEAD
+    name: Trinity Spear
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: True
+  - id: MAIN_SPEAR_LANCE_AVALON
+    name: Daybreaker
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: False
+  - id: 2H_GLAIVE_CRYSTAL
+    name: Rift Glaive
+    slot: MainHand
+    class: Hunter
+    subtype: Spear
+    is2H: True
+  # endregion (Spears)
+  # region Quarterstaffs
+  - id: 2H_QUARTERSTAFF
+    name: Quarterstaff
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_IRONCLADEDSTAFF
+    name: Iron-clad Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_DOUBLEBLADEDSTAFF
+    name: Double Bladed Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_COMBATSTAFF_MORGANA
+    name: Black Monk Stave
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_TWINSCYTHE_HELL
+    name: Soulscythe
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_ROCKSTAFF_KEEPER
+    name: Staff of Balance
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_QUARTERSTAFF_AVALON
+    name: Grailseeker
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  - id: 2H_DOUBLEBLADEDSTAFF_CRYSTAL
+    name: Phantom Twinblade
+    slot: MainHand
+    class: Hunter
+    subtype: Quarterstaff
+    is2H: True
+  # endregion (Quarterstaffs)
+  # region Shapeshifter
+  - id: 2H_SHAPESHIFTER_SET1
+    name: Prowling Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_SET2
+    name: Rootbound Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_SET3
+    name: Primal Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_MORGANA
+    name: Bloodmoon Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_HELL
+    name: Hellspawn Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_KEEPER
+    name: Earthrune Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  - id: 2H_SHAPESHIFTER_AVALON
+    name: Lightcaller
+    slot: MainHand
+    class: Hunter
+    subtype: Shapeshifter
+    is2H: True
+  # endregion (Shapeshifter)
+  # region Nature Staffs
+  - id: MAIN_NATURESTAFF
+    name: Nature Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: False
+  - id: 2H_NATURESTAFF
+    name: Great Nature Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: True
+  - id: 2H_WILDSTAFF
+    name: Wild Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: True
+  - id: MAIN_NATURESTAFF_KEEPER
+    name: Druidic Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: False
+  - id: 2H_NATURESTAFF_HELL
+    name: Blight Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: True
+  - id: 2H_NATURESTAFF_KEEPER
+    name: Rampant Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: True
+  - id: MAIN_NATURESTAFF_AVALON
+    name: Ironroot Staff
+    slot: MainHand
+    class: Hunter
+    subtype: Nature Staff
+    is2H: False
+  # endregion (Nature Staffs)
+  # endregion (Hunter Main Hands)
+  # region Mage Main Hands
+  # region Pyromancer
+  - id: MAIN_FIRESTAFF
+    name: Fire Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: False
+  - id: 2H_FIRESTAFF
+    name: Great Fire Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: True
+  - id: 2H_INFERNOSTAFF
+    name: Infernal Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: True
+  - id: MAIN_FIRESTAFF_KEEPER
+    name: Wildfire Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: False
+  - id: 2H_FIRESTAFF_HELL
+    name: Brimstone Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: True
+  - id: 2H_INFERNOSTAFF_MORGANA
+    name: Blazing Staff
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: True
+  - id: 2H_FIRE_RINGPAIR_AVALON
+    name: Dawnsong
+    slot: MainHand
+    class: Mage
+    subtype: Pyromancer
+    is2H: True
+  # endregion (Pyromancer)
+  # region Priest
+  - id: MAIN_HOLYSTAFF
+    name: Holy Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: False
+  - id: 2H_HOLYSTAFF
+    name: Great Holy Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: True
+  - id: 2H_DIVINESTAFF
+    name: Divine Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: True
+  - id: MAIN_HOLYSTAFF_MORGANA
+    name: Lifetouch Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: False
+  - id: 2H_HOLYSTAFF_HELL
+    name: Fallen Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: True
+  - id: 2H_HOLYSTAFF_UNDEAD
+    name: Redemption Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: True
+  - id: MAIN_HOLYSTAFF_AVALON
+    name: Hallowfall
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: False
+  - id: 2H_HOLYSTAFF_CRYSTAL
+    name: Exalted Staff
+    slot: MainHand
+    class: Mage
+    subtype: Priest
+    is2H: True
+  # endregion (Priest)
+  # region Arcanist
+  - id: MAIN_ARCANESTAFF
+    name: Arcane Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: False
+  - id: 2H_ARCANESTAFF
+    name: Great Arcane Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  - id: 2H_ENIGMATICSTAFF
+    name: Enigmatic Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  - id: MAIN_ARCANESTAFF_UNDEAD
+    name: Witchwork Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: False
+  - id: 2H_ARCANESTAFF_HELL
+    name: Occult Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  - id: 2H_ENIGMATICORB_MORGANA
+    name: Malevolent Locus
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  - id: 2H_ARCANE_RINGPAIR_AVALON
+    name: Evensong
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  - id: 2H_ARCANESTAFF_CRYSTAL
+    name: Astral Staff
+    slot: MainHand
+    class: Mage
+    subtype: Arcanist
+    is2H: True
+  # endregion (Arcanist)
+  # region Frost Mage
+  - id: MAIN_FROSTSTAFF
+    name: Frost Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: False
+  - id: 2H_FROSTSTAFF
+    name: Great Frost Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: True
+  - id: 2H_GLACIALSTAFF
+    name: Glacial Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: True
+  - id: MAIN_FROSTSTAFF_KEEPER
+    name: Hoarfrost Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: False
+  - id: 2H_ICEGAUNTLETS_HELL
+    name: Icicle Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: True
+  - id: 2H_ICECRYSTAL_UNDEAD
+    name: Permafrost Prism
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: True
+  - id: MAIN_FROSTSTAFF_AVALON
+    name: Chillhowl
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: False
+  - id: 2H_FROSTSTAFF_CRYSTAL
+    name: Arctic Staff
+    slot: MainHand
+    class: Mage
+    subtype: Frost Mage
+    is2H: True
+  # endregion (Frost Mage)
+  # region (Warlock)
+  - id: MAIN_CURSEDSTAFF
+    name: Cursed Staff
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: False
+  - id: 2H_CURSEDSTAFF
+    name: Great Cursed Staff
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: True
+  - id: 2H_DEMONICSTAFF
+    name: Demonic Staff
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: True
+  - id: MAIN_CURSEDSTAFF_UNDEAD
+    name: Lifecurse Staff
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: False
+  - id: 2H_SKULLORB_HELL
+    name: Cursed Skull
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: True
+  - id: 2H_CURSEDSTAFF_MORGANA
+    name: Damnation Staff
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: True
+  - id: MAIN_CURSEDSTAFF_AVALON
+    name: Shadowcaller
+    slot: MainHand
+    class: Mage
+    subtype: Warlock
+    is2H: False
+  # endregion (Warlock)
+  # endregion (Mage Main Hands)
+  # endregion (Main Hands)
+  # region Off Hands
+  # region Shields
+  - id: OFF_SHIELD
+    name: Shield
+    slot: OffHand
+    class: Warrior
+    subtype: Shield
+    is2H: False
+  - id: OFF_TOWERSHIELD_UNDEAD
+    name: Sarcophagus
+    slot: OffHand
+    class: Warrior
+    subtype: Shield
+    is2H: False
+  - id: OFF_SHIELD_HELL
+    name: Caitiff Shield
+    slot: OffHand
+    class: Warrior
+    subtype: Shield
+    is2H: False
+  - id: OFF_SPIKEDSHIELD_MORGANA
+    name: Facebreaker
+    slot: OffHand
+    class: Warrior
+    subtype: Shield
+    is2H: False
+  - id: OFF_SHIELD_AVALON
+    name: Astral Aegis
+    slot: OffHand
+    class: Warrior
+    subtype: Shield
+    is2H: False
+  # endregion (Shields)
+  # region Torches
+  - id: OFF_TORCH
+    name: Torch
+    slot: OffHand
+    class: Hunter
+    subtype: Torch
+    is2H: False
+  - id: OFF_HORN_KEEPER
+    name: Mistcaller
+    slot: OffHand
+    class: Hunter
+    subtype: Torch
+    is2H: False
+  - id: OFF_JESTERCANE_HELL
+    name: Leering Cane
+    slot: OffHand
+    class: Hunter
+    subtype: Torch
+    is2H: False
+  - id: OFF_LAMP_UNDEAD
+    name: Cryptcandle
+    slot: OffHand
+    class: Hunter
+    subtype: Torch
+    is2H: False
+  - id: OFF_TALISMAN_AVALON
+    name: Sacred Scepter
+    slot: OffHand
+    class: Hunter
+    subtype: Torch
+    is2H: False
+  # endregion (Torches)
+  # region Tomes
+  - id: OFF_BOOK
+    name: Tome of Spells
+    slot: OffHand
+    class: Mage
+    subtype: Tome
+    is2H: False
+  - id: OFF_ORB_MORGANA
+    name: Eye of Secrets
+    slot: OffHand
+    class: Mage
+    subtype: Tome
+    is2H: False
+  - id: OFF_DEMONSKULL_HELL
+    name: Muisak
+    slot: OffHand
+    class: Mage
+    subtype: Tome
+    is2H: False
+  - id: OFF_TOTEM_KEEPER
+    name: Taproot
+    slot: OffHand
+    class: Mage
+    subtype: Tome
+    is2H: False
+  - id: OFF_CENSER_AVALON
+    name: Celestial Censer
+    slot: OffHand
+    class: Mage
+    subtype: Tome
+    is2H: False
+  # endregion (Tomes)
+  # endregion(Off Hands)
+  # region Helmets
+  # region Warrior Helmets
+  - id: HEAD_PLATE_SET1
+    name: Soldier Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_SET2
+    name: Knight Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_SET3
+    name: Guardian Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_ROYAL
+    name: Royal Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_UNDEAD
+    name: Graveguard Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_HELL
+    name: Demon Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_KEEPER
+    name: Judicator Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_FEY
+    name: Duskweaver Helmet
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  - id: HEAD_PLATE_AVALON
+    name: Helmet of Valor
+    slot: Helmet
+    class: Warrior
+    is2H: False
+  # endregion (Warrior Helmets)
+  # region Hunter Helmets
+  - id: HEAD_LEATHER_SET1
+    name: Mercenary Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_SET2
+    name: Hunter Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_SET3
+    name: Assassin Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_ROYAL
+    name: Royal Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_MORGANA
+    name: Stalker Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_HELL
+    name: Hellion Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_UNDEAD
+    name: Specter Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_FEY
+    name: Mistwalker Hood
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  - id: HEAD_LEATHER_AVALON
+    name: Hood of Tenacity
+    slot: Helmet
+    class: Hunter
+    is2H: False
+  # endregion (Hunter Helmets)
+  # region Mage Helmets
+  - id: HEAD_CLOTH_SET1
+    name: Scholar Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_SET2
+    name: Cleric Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_SET3
+    name: Mage Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_ROYAL
+    name: Royal Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_KEEPER
+    name: Druid Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_HELL
+    name: Fiend Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_MORGANA
+    name: Cultist Cowl
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_FEY
+    name: Feyscale Hat
+    slot: Helmet
+    class: Mage
+    is2H: False
+  - id: HEAD_CLOTH_AVALON
+    name: Cowl of Purity
+    slot: Helmet
+    class: Mage
+    is2H: False
+  # endregion (Mage Helmets)
+  # endregion (Helmets)
+  # region Armors
+  # region Warrior Armors
+  - id: ARMOR_PLATE_SET1
+    name: Soldier Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_SET2
+    name: Knight Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_SET3
+    name: Guardian Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_ROYAL
+    name: Royal Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_UNDEAD
+    name: Graveguard Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_HELL
+    name: Demon Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_KEEPER
+    name: Judicator Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_FEY
+    name: Duskweaver Armor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  - id: ARMOR_PLATE_AVALON
+    name: Armor of Valor
+    slot: Armor
+    class: Warrior
+    is2H: False
+  # endregion (Warrior Armors)
+  # region Hunter Armors
+  - id: ARMOR_LEATHER_SET1
+    name: Mercenary Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_SET2
+    name: Hunter Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_SET3
+    name: Assassin Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_ROYAL
+    name: Royal Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_MORGANA
+    name: Stalker Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_HELL
+    name: Hellion Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_UNDEAD
+    name: Specter Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_FEY
+    name: Mistwalker Jacket
+    slot: Armor
+    class: Hunter
+    is2H: False
+  - id: ARMOR_LEATHER_AVALON
+    name: Jacket of Tenacity
+    slot: Armor
+    class: Hunter
+    is2H: False
+  # endregion (Hunter Armors)
+  # region Mage Armors
+  - id: ARMOR_CLOTH_SET1
+    name: Scholar Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_SET2
+    name: Cleric Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_SET3
+    name: Mage Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_ROYAL
+    name: Royal Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_KEEPER
+    name: Druid Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_HELL
+    name: Fiend Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_MORGANA
+    name: Cultist Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_FEY
+    name: Feyscale Robe
+    slot: Armor
+    class: Mage
+    is2H: False
+  - id: ARMOR_CLOTH_AVALON
+    name: Robe of Purity
+    slot: Armor
+    class: Mage
+    is2H: False
+  # endregion (Mage Armors)
+  # endregion (Armors)
+  # region Shoes
+  # region Warrior Shoes
+  - id: SHOES_PLATE_SET1
+    name: Soldier Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_SET2
+    name: Knight Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_SET3
+    name: Guardian Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_ROYAL
+    name: Royal Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_UNDEAD
+    name: Graveguard Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_HELL
+    name: Demon Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_KEEPER
+    name: Judicator Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_FEY
+    name: Duskweaver Boots
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  - id: SHOES_PLATE_AVALON
+    name: Boots of Valor
+    slot: Shoes
+    class: Warrior
+    is2H: False
+  # endregion (Warrior Shoes)
+  # region Hunter Shoes
+  - id: SHOES_LEATHER_SET1
+    name: Mercenary Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_SET2
+    name: Hunter Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_SET3
+    name: Assassin Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_ROYAL
+    name: Royal Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_MORGANA
+    name: Stalker Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_HELL
+    name: Hellion Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_UNDEAD
+    name: Specter Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_FEY
+    name: Mistwalker Shoes
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  - id: SHOES_LEATHER_AVALON
+    name: Shoes of Tenacity
+    slot: Shoes
+    class: Hunter
+    is2H: False
+  # endregion (Hunter Shoes)
+  # region Mage Shoes
+  - id: SHOES_CLOTH_SET1
+    name: Scholar Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_SET2
+    name: Cleric Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_SET3
+    name: Mage Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_ROYAL
+    name: Royal Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_KEEPER
+    name: Druid Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_HELL
+    name: Fiend Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_MORGANA
+    name: Cultist Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_FEY
+    name: Feyscale Sandals
+    slot: Shoes
+    class: Mage
+    is2H: False
+  - id: SHOES_CLOTH_AVALON
+    name: Sandals of Purity
+    slot: Shoes
+    class: Mage
+    is2H: False
+  # endregion (Mage Shoes)
+  # endregion (Shoes)
+  # region Capes
+  # TODO
+  # endregion (Capes)
+  # region 

@@ -1,18 +1,18 @@
 import { AlbionItem, AlbionItemDef, AlbionItemSlotEnum, Enchantment, ENCHANTMENTS, QUALITIES, Quality, Tier, TIERS } from 'pages/albion/model';
-import ItemDefs from '../assets/item-defs.json';
-
-const getAllItemDefs: () => AlbionItemDef[] = () => (
-  ItemDefs.map(sourceDef => ({
-    ...sourceDef,
-    slot: AlbionItemSlotEnum[
-      sourceDef.slot as keyof typeof AlbionItemSlotEnum
-    ],
-  } as AlbionItemDef))
-);
+import { structuredItemData } from './items';
 
 export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
-  const defs = getAllItemDefs();
-  return defs.filter(def => def.slot === slot);
+  const defs = structuredItemData;
+  if (slot === AlbionItemSlotEnum.MainHand) {
+    const classItems = Object.values(defs[slot]);
+    return classItems
+      .flatMap(classItemSet => Object.values(classItemSet as ArrayLike<AlbionItemDef>))
+      .flat();
+  } else {
+    return Object.values(defs[slot])
+      .filter(value => Array.isArray(value))
+      .flat();
+  }
 };
 
 export const getItemsForDef = (def: AlbionItemDef, tiers?: Tier[], enchantments?: Enchantment[], qualities?: Quality[]) => {
