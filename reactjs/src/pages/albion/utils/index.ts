@@ -1,4 +1,4 @@
-import { AlbionItem, AlbionItemDef, AlbionItemSlotEnum, Enchantment, ENCHANTMENTS, QUALITIES, Quality, Tier, TIERS } from 'pages/albion/model';
+import { AlbionItem, AlbionItemDef, AlbionItemFilterState, AlbionItemSlotEnum, ENCHANTMENTS, QUALITIES, TIERS } from 'pages/albion/model';
 import { structuredItemData } from './items';
 
 export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
@@ -15,18 +15,18 @@ export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
   }
 };
 
-export const getItemsForDef = (def: AlbionItemDef, tiers?: Tier[], enchantments?: Enchantment[], qualities?: Quality[]) => {
-  const tiersToUse = tiers ? tiers : TIERS;
-  const enchantmentsToUse = enchantments ? enchantments : ENCHANTMENTS;
-  const qualitiesToUse = qualities ? qualities : QUALITIES;
+export const getFilteredItemsForSlot = (slot: AlbionItemSlotEnum, filters: AlbionItemFilterState) => {
+  const itemDefs = getItemDefsForSlot(slot);
 
-  const result: AlbionItem[] = [];
-  for (const tier of tiersToUse) {
-    for (const enchantment of enchantmentsToUse) {
-      for (const quality of qualitiesToUse) {
-        result.push({ def, tier, enchantment, quality });
-      }
-    }
-  }
-  return result;
+  const tiers = filters.tiers.length ? filters.tiers : TIERS;
+  const enchantments = filters.enchantments.length ? filters.enchantments : ENCHANTMENTS;
+  const qualities = [ QUALITIES[0] ];
+
+  return itemDefs.flatMap(itemDef => (
+    tiers.flatMap(tier => (
+      enchantments.flatMap(enchantment => (
+        qualities.map(quality => (new AlbionItem(itemDef, tier, enchantment, quality)))
+      ))
+    ))
+  ));
 };

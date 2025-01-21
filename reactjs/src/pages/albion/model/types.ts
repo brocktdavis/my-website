@@ -29,7 +29,7 @@ export type Enchantment = typeof ENCHANTMENTS[number];
 export const QUALITIES = [ 1, 2, 3, 4, 5 ] as const;
 export type Quality = typeof QUALITIES[number];
 
-export interface AlbionItem {
+export interface AlbionItemData {
   def: AlbionItemDef;
   tier: Tier;
   enchantment: Enchantment;

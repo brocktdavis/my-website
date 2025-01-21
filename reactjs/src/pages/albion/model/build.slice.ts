@@ -1,18 +1,20 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from 'app/model/store';
-import { AlbionItem, AlbionItemSlotEnum, Enchantment, Quality, Tier } from './types';
+import { AlbionItemData, AlbionItemSlotEnum, Enchantment, Quality, Tier } from './types';
 
 export const NAME = 'albionBuild';
 
 export interface AlbionItemFilterState {
-  name?: string;
-  tiers?: Tier[];
-  enchantments?: Enchantment[];
-  qualities?: Quality[];
+  name: string;
+  tiers: Tier[];
+  enchantments: Enchantment[];
+  qualities: Quality[];
 }
 
 type TFiltersBySlot = { [T in AlbionItemSlotEnum]: AlbionItemFilterState };
-type TItemsBySlot = { [T in AlbionItemSlotEnum]: AlbionItem | undefined };
+// Must use AlbionItemData (backing object) since AlbionItem is a class and thus not serializable
+// Alternatively, could implement a serializer
+type TItemsBySlot = { [T in AlbionItemSlotEnum]: AlbionItemData | undefined };
 
 export interface AlbionBuildState {
   overallFilters: AlbionItemFilterState;
@@ -20,10 +22,17 @@ export interface AlbionBuildState {
   itemsBySlot: TItemsBySlot;
 }
 
+const _blankFilterState: AlbionItemFilterState = {
+  name: '',
+  tiers: [],
+  enchantments: [],
+  qualities: [],
+};
+
 const initialState: AlbionBuildState = {
-  overallFilters: { },
+  overallFilters: { ..._blankFilterState },
   filtersBySlot: Object.values(AlbionItemSlotEnum).reduce((acc, key) => {
-    acc[key] = {};
+    acc[key] = { ..._blankFilterState };
     return acc
   }, {} as TFiltersBySlot),
   itemsBySlot: Object.values(AlbionItemSlotEnum).reduce((acc, key) => {
@@ -38,7 +47,7 @@ const buildSlice = createSlice({
   reducers: {
     //#region overallFilters
     clearOverallFilters(state) {
-      state.overallFilters = { };
+      state.overallFilters = { ..._blankFilterState };
     },
     setOverallFilterValue(state, action: PayloadAction<{ key: keyof AlbionItemFilterState, value: unknown }>) {
       const { key, value } = action.payload;
@@ -60,12 +69,12 @@ const buildSlice = createSlice({
     //#region filtersBySlot
     clearAllSlotFilters(state) {
       state.filtersBySlot = Object.values(AlbionItemSlotEnum).reduce((acc, key) => {
-        acc[key] = {};
+        acc[key] = { ..._blankFilterState };
         return acc
       }, {} as TFiltersBySlot);
     },
     clearSlotFilter(state, action: PayloadAction<AlbionItemSlotEnum>) {
-      state.filtersBySlot[action.payload] = {};
+      state.filtersBySlot[action.payload] = { ..._blankFilterState };
     },
     setSlotFilterValue(state, action: PayloadAction<{ slot: AlbionItemSlotEnum, key: keyof AlbionItemFilterState, value: unknown }>) {
       const { slot, key, value } = action.payload;
@@ -90,9 +99,9 @@ const buildSlice = createSlice({
         state.itemsBySlot[itemSlot] = undefined;
       }
     },
-    setItem(state, action: PayloadAction<{ slot: AlbionItemSlotEnum, item: AlbionItem }>) {
-      const { slot, item } = action.payload;
-      state.itemsBySlot[slot] = item;
+    setItem(state, action: PayloadAction<{ slot: AlbionItemSlotEnum, itemData: AlbionItemData }>) {
+      const { slot, itemData } = action.payload;
+      state.itemsBySlot[slot] = itemData;
     },
   }
 });
@@ -108,7 +117,7 @@ export const {
 } = buildSlice.actions;
 
 export const selectOverallFilters = (state: RootState) => state[NAME].overallFilters;
-export const selectFilterForSlot = (state: RootState, slot: AlbionItemSlotEnum) => state[NAME].filtersBySlot[slot];
+export const selectFiltersForSlot = (state: RootState, slot: AlbionItemSlotEnum) => state[NAME].filtersBySlot[slot];
 export const selectItemForSlot = (state: RootState, slot: AlbionItemSlotEnum) => state[NAME].itemsBySlot[slot];
 
 export default buildSlice.reducer;
