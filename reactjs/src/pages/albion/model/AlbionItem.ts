@@ -34,7 +34,13 @@ export class AlbionItem implements AlbionItemData {
   }
 
   private get prefix(): string {
+    if (this.def.prefixesByTier) {
+      return this.def.prefixesByTier[this.tier];
+    }
+
     switch (this.tier) {
+      case 2: return "Novice's";
+      case 3: return "Journeyman's";
       case 4: return "Adept's";
       case 5: return "Expert's";
       case 6: return "Master's";

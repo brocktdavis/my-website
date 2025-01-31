@@ -1337,6 +1337,144 @@ items:
   # endregion (Mage Shoes)
   # endregion (Shoes)
   # region Capes
-  # TODO
+  - id: CAPE
+    name: Cape
+    slot: Cape
+  - id: CAPEITEM_FW_BRIDGEWATCH
+    name: Bridgewatch Cape
+    slot: Cape
+  - id: CAPEITEM_FW_FORTSTERLING
+    name: Fort Sterling Cape
+    slot: Cape
+  - id: CAPEITEM_FW_LYMHURST
+    name: Lymhurst Cape
+    slot: Cape
+  - id: CAPEITEM_FW_MARTLOCK
+    name: Martlock Cape
+    slot: Cape
+  - id: CAPEITEM_FW_THETFORD
+    name: Thetford Cape
+    slot: Cape
+  - id: CAPEITEM_FW_CAERLEON
+    name: Caerleon Cape
+    slot: Cape
+  - id: CAPEITEM_FW_BRECILIEN
+    name: Brecilien Cape
+    slot: Cape
+  - id: CAPEITEM_AVALON
+    name: Avalonian Cape
+    slot: Cape
+  - id: CAPEITEM_HERETIC
+    name: Heretic Cape
+    slot: Cape
+  - id: CAPEITEM_UNDEAD
+    name: Undead Cape
+    slot: Cape
+  - id: CAPEITEM_KEEPER
+    name: Keeper Cape
+    slot: Cape
+  - id: CAPEITEM_MORGANA
+    name: Morgana Cape
+    slot: Cape
+  - id: CAPEITEM_DEMON
+    name: Demon Cape
+    slot: Cape
   # endregion (Capes)
-  # region 
+  # region Potions
+  - id: POTION_HEAL
+    name: Healing Potion
+    slot: Potion
+    prefixesByTier: 
+      2: Minor
+      4: ''
+      6: Major
+  - id: POTION_ENERGY
+    name: Energy Potion
+    slot: Potion
+    prefixesByTier:
+      2: Minor
+      4: ''
+      6: Major
+  - id: POTION_REVIVE
+    name: Gigantify Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_STONESKIN
+    name: Resistance Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_SLOWFIELD
+    name: Sticky Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_COOLDOWN
+    name: Poison Potion
+    slot: Potion
+    prefixesByTier:
+      4: Minor
+      6: ''
+      8: Major
+  - id: POTION_CLEANSE
+    name: Invisibility Potion
+    slot: Potion
+    prefixesByTier:
+      8: ''
+  - id: POTION_MOB_RESET
+    name: Calming Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_CLEANSE2
+    name: Cleansing Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_ACID
+    name: Acid Potion
+    slot: Potion
+    prefixesByTier:
+      3: Minor
+      5: ''
+      7: Major
+  - id: POTION_BERSERK
+    name: Berserk Potion
+    slot: Potion
+    prefixesByTier:
+      4: Minor
+      6: ''
+      8: Major
+  - id: POTION_LAVA
+    name: Hellfire Potion
+    slot: Potion
+    prefixesByTier:
+      4: Minor
+      6: ''
+      8: Major
+  - id: POTION_GATHER
+    name: Gathering Potion
+    slot: Potion
+    prefixesByTier:
+      4: Minor
+      6: ''
+      8: Major
+  - id: POTION_TORNADO
+    name: Tornado in a Bottle
+    slot: Potion
+    prefixesByTier:
+      4: Minor
+      6: ''
+      8: Major
+  # endregion (Potions)

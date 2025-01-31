@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from 'app/model/store';
-import { AlbionItem, AlbionItemSlotEnum, Enchantment, ENCHANTMENTS, selectFiltersForSlot, setItem, setSlotFilterValue, Tier, TIERS } from 'pages/albion/model';
-import { getFilteredItemsForSlot } from 'pages/albion/utils';
+import { AlbionItem, AlbionItemSlotEnum, Enchantment, selectFiltersForSlot, setItem, setSlotFilterValue, Tier } from 'pages/albion/model';
+import { getFilteredItemsForSlot, getAvailableTiersForSlot, getAvailableEnchantmentsForSlot } from 'pages/albion/utils';
 import { hideModal } from 'shared/model';
 
 const ItemPreview = ({ item, onClick }: { item: AlbionItem, onClick: () => void }) => (
@@ -61,7 +61,7 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
               </span>
             )}
           </p>
-          { TIERS.map(tier => (
+          { getAvailableTiersForSlot(slot).map(tier => (
             <div key={tier} className='flex'>
               <input
                 type='checkbox'
@@ -85,7 +85,7 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
               </span>
             )}
           </p>
-          { ENCHANTMENTS.map(enchantment => (
+          { getAvailableEnchantmentsForSlot(slot).map(enchantment => (
             <div key={enchantment} className='flex'>
               <input
                 type='checkbox'
