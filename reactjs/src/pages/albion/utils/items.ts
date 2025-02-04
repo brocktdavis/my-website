@@ -96,6 +96,10 @@ export const getFilteredItemsForSlot = (slot: AlbionItemSlotEnum, filters: Albio
     }
   }
 
+  if (filters.name) {
+    return result.filter(item => item.displayName.toLocaleLowerCase().includes(filters.name.toLocaleLowerCase()));
+  }
+
   return result;
 };
 

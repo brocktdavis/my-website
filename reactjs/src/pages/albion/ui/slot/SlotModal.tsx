@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { MdSearch } from 'react-icons/md';
 import { RootState } from 'app/model/store';
 import { AlbionItem, AlbionItemSlotEnum, Enchantment, selectFiltersForSlot, setItem, setSlotFilterValue, Tier } from 'pages/albion/model';
 import { getFilteredItemsForSlot, getAvailableTiersForSlot, getAvailableEnchantmentsForSlot } from 'pages/albion/utils';
@@ -14,12 +16,19 @@ const ItemPreview = ({ item, onClick }: { item: AlbionItem, onClick: () => void 
 );
 
 const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
+  const [ filterInput, setFilterInput ] = useState('');
   const slotFilters = useSelector((state: RootState) => selectFiltersForSlot(state, slot));
 
   const dispatch = useDispatch();
 
   if (!slotFilters) { return null; }
   const { tiers, enchantments } = slotFilters;
+
+  const filterText = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setFilterInput(value);
+    dispatch(setSlotFilterValue({ slot, key: 'name', value }));
+  };
 
   const filterTier = (tier: Tier | null) => {
     let newTiers: Tier[];
@@ -48,6 +57,16 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
 
   return (
     <div className='w-full rounded-md border-dashed border p-1'>
+      <div className='relative w-full pb-1'>
+        <MdSearch className='absolute w-6 h-6 translate-y-0.5' />
+        <input
+          type='text'
+          placeholder='Filter by name'
+          className='w-full pl-6'
+          value={filterInput}
+          onChange={filterText}
+        />
+      </div>
       <div className='w-full h-full flex flex-row'>
         <div className='flex-1'>
           <p>
@@ -69,7 +88,7 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
                 checked={tiers.includes(tier)}
                 onChange={() => filterTier(tier)}
               />
-              <label className='ml-1 flex-1' htmlFor={`FilterTier${tier}`}>T{tier}</label>
+              <label className='ml-1 flex-1 cursor-pointer' htmlFor={`FilterTier${tier}`}>T{tier}</label>
             </div>
           ))}
         </div>
@@ -93,7 +112,7 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
                 checked={enchantments.includes(enchantment)}
                 onChange={() => filterEnchantment(enchantment)}
               />
-              <label className='ml-1 flex-1' htmlFor={`FilterEnchantment${enchantment}`}>.{enchantment}</label>
+              <label className='ml-1 flex-1 cursor-pointer' htmlFor={`FilterEnchantment${enchantment}`}>.{enchantment}</label>
             </div>
           ))}
         </div>
