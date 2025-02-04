@@ -8,7 +8,7 @@ export enum AlbionItemSlotEnum {
   Mount = 'Mount', // TODO: Import mounts
   Cape = 'Cape',
   OffHand = 'OffHand',
-  Food = 'Food', // TODO: Import food
+  Food = 'Food',
 }
 
 export interface AlbionItemDef {
@@ -21,7 +21,7 @@ export interface AlbionItemDef {
   prefixesByTier?: { [T in Tier]: string };
 }
 
-export type Tier = 2 | 3 | 4 | 5 | 6 | 7 | 8;
+export type Tier = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 export type Enchantment = 0 | 1 | 2 | 3 | 4;
 

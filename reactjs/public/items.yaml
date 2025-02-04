@@ -1478,3 +1478,117 @@ items:
       6: ''
       8: Major
   # endregion (Potions)
+  # region Food
+  - id: MEAL_SOUP
+    name: Soup
+    slot: Food
+    prefixesByTier:
+      1: Carrot
+      3: Wheat
+      5: Cabbage
+  - id: MEAL_SOUP_FISH
+    name: Clam Soup
+    slot: Food
+    prefixesByTier:
+      1: Greenmoor
+      3: Murkwater
+      5: Blackbog
+  - id: MEAL_SALAD
+    name: Salad
+    slot: Food
+    prefixesByTier:
+      2: Bean
+      4: Turnip
+      6: Potato
+  - id: MEAL_SALAD_FISH
+    name: Salad
+    slot: Food
+    prefixesByTier:
+      2: Shallowshore Squid
+      4: Midwater Octopus
+      6: Deepwater Kraken
+  - id: MEAL_PIE
+    name: Pie
+    slot: Food
+    prefixesByTier:
+      3: Chicken
+      5: Goose
+      7: Pork
+  - id: MEAL_PIE_FISH
+    name: Pie
+    slot: Food
+    prefixesByTier:
+      3: Upload Coldeye
+      5: Mountain Blindeye
+      7: Frostpeak Deadeye
+  - id: MEAL_OMELETTE
+    name: Omelette
+    slot: Food
+    prefixesByTier:
+      3: Chicken
+      5: Goose
+      7: Pork
+  - id: MEAL_OMELETTE_FISH
+    name: Crab Omelette
+    slot: Food
+    prefixesByTier:
+      3: Lowriver
+      5: Drybrook
+      7: Dusthole Crab
+  - id: MEAL_OMELETTE_AVALON
+    name: Omelette
+    slot: Food
+    prefixesByTier:
+      3: Avalonian Chicken
+      5: Avalonian Goose
+      7: Avalonian Pork
+  - id: MEAL_STEW
+    name: Stew
+    slot: Food
+    prefixesByTier:
+      4: Goat
+      6: Mutton
+      8: Beef
+  - id: MEAL_STEW_FISH
+    name: Eel Stew
+    slot: Food
+    prefixesByTier:
+      4: Avalonian Goat
+      6: Avalonian Mutton
+      8: Avalonian Beef
+  - id: MEAL_SANDWICH
+    name: Sandwich
+    slot: Food
+    prefixesByTier:
+      4: Goat
+      6: Mutton
+      8: Beef
+  - id: MEAL_SANDWICH_FISH
+    name: Lurcher Sandwich
+    slot: Food
+    prefixesByTier:
+      4: Stonestream
+      6: Rushwater
+      8: Thunderfall
+  - id: MEAL_SANDWICH_AVALOn
+    name: Sandwich
+    slot: Food
+    prefixesByTier:
+      4: Avalonian Goat
+      6: Avalonian Mutton
+      8: Avalonian Beef
+  - id: MEAL_ROAST
+    name: ''
+    slot: Food
+    prefixesByTier:
+      3: Roast Chicken
+      5: Roast Goose
+      7: Roast Pork
+  - id: MEAL_ROAST_FISH
+    name: ''
+    slot: Food
+    prefixesByTier:
+      3: Roasted Whitefog Snapper
+      5: Roasted Clearhaze Snapper
+      7: Roasted Puremist Snapper
+  # endregion (Food)

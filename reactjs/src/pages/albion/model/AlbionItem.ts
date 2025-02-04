@@ -39,6 +39,7 @@ export class AlbionItem implements AlbionItemData {
     }
 
     switch (this.tier) {
+      case 1: return "";
       case 2: return "Novice's";
       case 3: return "Journeyman's";
       case 4: return "Adept's";
