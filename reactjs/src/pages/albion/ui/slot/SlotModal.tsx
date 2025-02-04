@@ -2,7 +2,17 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { MdSearch } from 'react-icons/md';
 import { RootState } from 'app/model/store';
-import { AlbionItem, AlbionItemSlotEnum, Enchantment, selectFiltersForSlot, setItem, setSlotFilterValue, Tier } from 'pages/albion/model';
+import {
+  AlbionItem,
+  AlbionItemSlotEnum,
+  Enchantment,
+  selectFiltersForSlot,
+  setEnchantmentFilterValue,
+  setItem,
+  setNameFilterValue,
+  setTierFilterValue,
+  Tier
+} from 'pages/albion/model';
 import { getFilteredItemsForSlot, getAvailableTiersForSlot, getAvailableEnchantmentsForSlot } from 'pages/albion/utils';
 import { hideModal } from 'shared/model';
 
@@ -27,31 +37,15 @@ const ModalFilters = ({ slot }: { slot: AlbionItemSlotEnum }) => {
   const filterText = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setFilterInput(value);
-    dispatch(setSlotFilterValue({ slot, key: 'name', value }));
+    dispatch(setNameFilterValue(slot, value));
   };
 
   const filterTier = (tier: Tier | null) => {
-    let newTiers: Tier[];
-    if (tier === null) {
-      newTiers = [];
-    } else if (tiers.includes(tier)) {
-      newTiers = tiers.filter(t => t !== tier);
-    } else {
-      newTiers = [ ...tiers, tier ];
-    }
-    dispatch(setSlotFilterValue({ slot, key: 'tiers', value: newTiers }));
+    dispatch(setTierFilterValue(slot, tiers, tier));
   };
 
   const filterEnchantment = (enchantment: Enchantment | null) => {
-    let newEnchantments: Enchantment[];
-    if (enchantment === null) {
-      newEnchantments = [];
-    } else if (enchantments.includes(enchantment)) {
-      newEnchantments = enchantments.filter(e => e !== enchantment);
-    } else {
-      newEnchantments = [ ...enchantments, enchantment ];
-    }
-    dispatch(setSlotFilterValue({ slot, key: 'enchantments', value: newEnchantments }));
+    dispatch(setEnchantmentFilterValue(slot, enchantments, enchantment));
   };
 
 

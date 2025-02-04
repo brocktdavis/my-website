@@ -106,12 +106,57 @@ const buildSlice = createSlice({
   }
 });
 
+// #region Filter setting convenience functions
+
+export const setNameFilterValue = (slot: AlbionItemSlotEnum | null, value: string) => {
+  if (slot === null) {
+    return buildSlice.actions.setOverallFilterValue({ key: 'name', value });
+  } else {
+    return buildSlice.actions.setSlotFilterValue({ slot, key: 'name', value });
+  }
+};
+
+export const setTierFilterValue = (slot: AlbionItemSlotEnum | null, currentTiers: Tier[], tier: Tier | null) => {
+  let newTiers: Tier[];
+  if (tier === null) {
+    newTiers = [];
+  } else if (currentTiers.includes(tier)) {
+    newTiers = currentTiers.filter(t => t !== tier);
+  } else {
+    newTiers = [ ...currentTiers, tier ];
+  }
+
+  if (slot === null) {
+    return buildSlice.actions.setOverallFilterValue({ key: 'tiers', value: newTiers });
+  } else {
+    return buildSlice.actions.setSlotFilterValue({ slot, key: 'tiers', value: newTiers });
+  }
+};
+
+export const setEnchantmentFilterValue = (slot: AlbionItemSlotEnum | null, currentEnchantments: Enchantment[], enchantment: Enchantment | null) => {
+  let newEnchantments: Enchantment[];
+    if (enchantment === null) {
+      newEnchantments = [];
+    } else if (currentEnchantments.includes(enchantment)) {
+      newEnchantments = currentEnchantments.filter(e => e !== enchantment);
+    } else {
+      newEnchantments = [ ...currentEnchantments, enchantment ];
+    }
+
+    if (slot === null) {
+      return buildSlice.actions.setOverallFilterValue({ key: 'enchantments', value: newEnchantments });
+    } else {
+      return buildSlice.actions.setSlotFilterValue({ slot, key: 'enchantments', value: newEnchantments });
+    }
+};
+// #endregion
+
 export const {
   clearOverallFilters,
-  setOverallFilterValue,
+  // setOverallFilterValue, <-- remove in favor of convenience function
   clearAllSlotFilters,
   clearSlotFilter,
-  setSlotFilterValue,
+  // setSlotFilterValue, <-- remove in favor of convenience function
   clearAllItems,
   setItem,
 } = buildSlice.actions;
