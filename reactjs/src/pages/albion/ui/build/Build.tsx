@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { AlbionItemSlotEnum, selectOverallFilters } from 'pages/albion/model';
+import { AlbionFilters } from '../filters';
 import { AlbionItemSlot } from '../slot';
 
 export const AlbionBuild = () => {
@@ -9,9 +10,7 @@ export const AlbionBuild = () => {
 
   return (
     <>
-    <div className='w-full h-32 rounded-md border-dashed border flex justify-center items-center'>
-      <p>Future: Filters & Search</p>
-    </div>
+    <AlbionFilters slot={null} />
     <div className='flex flex-row flex-nowrap justify-center'>
       <div className='flex flex-col'>
         <AlbionItemSlot slot={AlbionItemSlotEnum.Bag} style={{ marginTop: '10px' }} />

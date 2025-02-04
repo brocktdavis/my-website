@@ -56,6 +56,19 @@ for (const [slotName, slotItems] of Object.entries(bySlot)) {
 
 // #endregion (Extract/Transform)
 
+export const combineFilters = (overallFilters: AlbionItemFilterState, slotFilters: AlbionItemFilterState) => {
+  const tiers = [ ...overallFilters.tiers, ...slotFilters.tiers ];
+  const enchantments = [ ...overallFilters.enchantments, ...slotFilters.enchantments ];
+  const qualities = [ ...overallFilters.qualities, ...slotFilters.qualities ];
+  
+  return {
+    name: slotFilters.name,
+    tiers: [ ...new Set(tiers) ],
+    enchantments: [ ...new Set(enchantments) ],
+    qualities: [ ...new Set(qualities) ],
+  };
+}
+
 export const getItemDefsForSlot = (slot: AlbionItemSlotEnum) => {
   const defs = structuredItemData;
 
@@ -103,17 +116,19 @@ export const getFilteredItemsForSlot = (slot: AlbionItemSlotEnum, filters: Albio
   return result;
 };
 
-export const getAvailableTiersForSlot: (slot: AlbionItemSlotEnum) => Tier[] = (slot: AlbionItemSlotEnum) => {
-  if (slot === AlbionItemSlotEnum.Potion) {
-    return [ 2, 3, 4, 5, 6, 7, 8 ];
-  } else if (slot === AlbionItemSlotEnum.Food) {
+type TTiersForSlot = (slot: AlbionItemSlotEnum | null) => Tier[] 
+export const getAvailableTiersForSlot: TTiersForSlot = (slot: AlbionItemSlotEnum | null) => {
+  if (slot === null || slot === AlbionItemSlotEnum.Food) {
     return [ 1, 2, 3, 4, 5, 6, 7, 8 ];
+  } else if (slot === AlbionItemSlotEnum.Potion) {
+    return [ 2, 3, 4, 5, 6, 7, 8 ];
   } else {
     return [ 4, 5, 6, 7, 8 ];
   }
 };
 
-export const getAvailableEnchantmentsForSlot: (slot: AlbionItemSlotEnum) => Enchantment[] = (slot: AlbionItemSlotEnum) => {
+type TEnchantmentsForSlot = (slot: AlbionItemSlotEnum | null) => Enchantment[]
+export const getAvailableEnchantmentsForSlot: TEnchantmentsForSlot = (slot: AlbionItemSlotEnum | null) => {
   if (slot === AlbionItemSlotEnum.Potion || slot == AlbionItemSlotEnum.Food) {
     return [ 0, 1, 2, 3 ];
   } else { 
