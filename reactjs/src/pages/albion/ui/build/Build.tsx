@@ -1,17 +1,31 @@
-import { useSelector } from 'react-redux';
-import { AlbionItemSlotEnum, selectOverallFilters } from 'pages/albion/model';
+import { useRef } from 'react';
+import { domToPng } from 'modern-screenshot';
+import { AlbionItemSlotEnum } from 'pages/albion/model';
 import { AlbionFilters } from '../filters';
 import { AlbionItemSlot } from '../slot';
 
 export const AlbionBuild = () => {
-  const { name, tiers, enchantments } = useSelector(selectOverallFilters);
-  console.log('BTD [AlbionBuild] filters: ', name, tiers, enchantments);
+  const buildRef = useRef(null);
 
+  const handleExport = async () => {
+    if (buildRef.current) {
+      const image = await domToPng(buildRef.current);
+
+      // Create a download link
+      const link = document.createElement("a");
+      link.href = image;
+      link.download = "exported-image.png";
+      link.click();
+    }
+  };
 
   return (
     <>
+    <button onClick={handleExport}>
+      Export
+    </button>
     <AlbionFilters slot={null} />
-    <div className='flex flex-row flex-nowrap justify-center'>
+    <div ref={buildRef} className='flex flex-row flex-nowrap justify-center'>
       <div className='flex flex-col'>
         <AlbionItemSlot slot={AlbionItemSlotEnum.Bag} style={{ marginTop: '10px' }} />
         <AlbionItemSlot slot={AlbionItemSlotEnum.MainHand} />
